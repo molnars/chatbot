@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: document_ai
+    ports:
+      - 8501:8501
+    network_mode: "host"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - .:/app
